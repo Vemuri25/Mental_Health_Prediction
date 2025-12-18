@@ -86,10 +86,6 @@ This repository contains **two modeling approaches**:
 ├── xgboost_MentalHealth.onnx
 ├── README.md
 
-yaml
-Copy code
-
----
 
 ## 📦 Deployment Summary
 
