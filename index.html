@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ONNX Local Runner</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.35;
+      }
+      pre {
+        background: #f6f8fa;
+        padding: 12px;
+        border-radius: 10px;
+        overflow: auto;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      button {
+        padding: 10px 14px;
+        cursor: pointer;
+      }
+      input[type="text"] {
+        padding: 10px;
+        width: 520px;
+        max-width: 100%;
+      }
+      textarea {
+        width: min(900px, 100%);
+        height: 180px;
+        padding: 10px;
+      }
+      .hint {
+        color: #444;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ONNX Runtime Web (Local)</h1>
+
+    <div class="row">
+      <button id="loadBtn">Load model</button>
+      <button id="runBtn" disabled>Run inference</button>
+    </div>
+
+    <p>
+      Model path:
+      <input id="modelPath" type="text" value="./your_model.onnx" />
+    </p>
+
+    <p class="hint">
+      Input is a 2D tensor shaped <b>[N, 5]</b>. Enter rows of 5 numbers. One
+      row per line, comma-separated.
+    </p>
+
+    <textarea id="inputRows">0,0,0,0,0</textarea>
+
+    <h3>Status</h3>
+    <pre id="status">Idle</pre>
+
+    <h3>Output</h3>
+    <pre id="output">-</pre>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
