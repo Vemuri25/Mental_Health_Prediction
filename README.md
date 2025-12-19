@@ -9,7 +9,7 @@ This project implements a **machine learning–based mental health mood predicti
 The regression model is deployed as an **interactive web application** using **Gradio and ONNX Runtime**.
 
 🔗 **Live Demo:**  
-https://b677a41b58db9fcd71.gradio.live/
+https://vemuri25.github.io/Mental_Health_Prediction/
 
 Users can input values and receive:
 - A numerical **Mood Score**
